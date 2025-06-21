@@ -12,7 +12,7 @@ import { SearchProvider } from './SearchContext.jsx';
 import ScrollToTop from './ScrollToTop.jsx';
 import Topbar from './assets/Topbar.jsx';
 import ChatBot from './ChatBot.jsx';
-
+// Importing the necessary components and styles
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
