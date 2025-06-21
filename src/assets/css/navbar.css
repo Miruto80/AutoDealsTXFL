@@ -1,0 +1,39 @@
+.header {
+    background-color: white; /* Color del header */
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+    /* Asegura que el header esté por encima de otros elementos */
+}
+
+header h1 {
+    color: black; /* Color del texto del h1 */
+    font-size: 1.5rem; /* Tamaño del h1 para que no sea demasiado grande */
+    font-weight: bold;
+     text-transform: uppercase;
+}
+
+header nav ul li a {
+    color: black !important; /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold !important;
+    transition: color 0.5s ease;
+    font-size: 19px !important;
+    margin-left: 5px;
+}
+header nav ul li a:hover {
+    color: #0782fa !important; /* Color de los enlaces */
+}
+
+#Link-I{
+    background-color: #0782fa;
+    border-radius: 15px;
+    padding: 12px;
+    color: white !important;
+    transition: background-color 0.5s ease;
+    text-align: center;
+}
+
+#Link-I:hover{
+    background-color: black;
+}
