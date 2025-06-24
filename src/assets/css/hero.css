@@ -105,6 +105,17 @@
     height: 100%;
     object-fit: cover;
   }
+  @media (max-width: 575.98px) {
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .hero-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 }
 
 .hero-slide {
