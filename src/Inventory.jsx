@@ -2802,7 +2802,7 @@ export default function Inventory() {
                   <button className="btn btn-secondary ms-2 position-absolute end-0 top-50 translate-middle-y" style={{zIndex:2, right: 0, minWidth: 36, minHeight: 36, maxWidth: '44px'}} onClick={nextSlide}>&gt;</button>
                 </div>
                 {/* Thumbnails */}
-                <div className="d-flex justify-content-center gap-2 mb-3 thumbnails-scroll" style={{overflowX: 'auto', padding: '0 10px', scrollBehavior: 'smooth'}} ref={el => window.thumbnailsDiv = el}>
+                <div className="d-flex justify-content-start gap-2 mb-3 thumbnails-scroll" style={{overflowX: 'auto', padding: '0 10px', scrollBehavior: 'smooth'}} ref={el => window.thumbnailsDiv = el}>
                   {modalCar.images.map((img, idx) => (
                     <img 
                       key={idx}
