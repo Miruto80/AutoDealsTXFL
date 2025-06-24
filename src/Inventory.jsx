@@ -2791,12 +2791,14 @@ export default function Inventory() {
               <div className="modal-body text-center">
                 <div className="d-flex justify-content-center align-items-center mb-3 position-relative" style={{width: '100%'}}>
                   <button className="btn btn-secondary me-2 position-absolute start-0 top-50 translate-middle-y" style={{zIndex:2, left: 0, minWidth: 36, minHeight: 36, maxWidth: '44px'}} onClick={prevSlide}>&lt;</button>
+                  <a href={modalCar.images[sliderIndex]} target="_blank" rel="noopener noreferrer">
                   <img 
-                    src={modalCar.images[sliderIndex]} 
-                    style={{width:'100%', maxWidth:'640px', height:'auto', maxHeight:'60vw', minHeight:'180px', objectFit:'cover', borderRadius:'12px'}} 
-                    alt="Car slider" 
-                    className="rounded" 
+                  src={modalCar.images[sliderIndex]}
+                  style={{ width:'100%', maxWidth:'640px', height:'auto', maxHeight:'60vw', minHeight:'180px', objectFit:'cover', borderRadius:'12px' }}
+                  alt="Car slider"
+                  className="rounded"
                   />
+                  </a>
                   <button className="btn btn-secondary ms-2 position-absolute end-0 top-50 translate-middle-y" style={{zIndex:2, right: 0, minWidth: 36, minHeight: 36, maxWidth: '44px'}} onClick={nextSlide}>&gt;</button>
                 </div>
                 {/* Thumbnails */}
