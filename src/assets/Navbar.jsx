@@ -39,13 +39,13 @@ export default function Navbar() {
                 <input
                   className="form-control me-2"
                   type="search"
-                  placeholder="Buscar autos..."
-                  aria-label="Buscar"
+                  placeholder="search cars..."
+                  aria-label="search"
                   name="search"
                   value={search}
                   onChange={e => setSearch(e.target.value)}
                 />
-                <button className="btn btn-outline-dark" type="submit">Buscar</button>
+                <button className="btn btn-outline-dark" type="submit">Search</button>
               </form>
             </div>
           </div>
