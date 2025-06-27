@@ -5,6 +5,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import { useForm, ValidationError } from '@formspree/react';
 import Swal from 'sweetalert2';
+import CarCard from './Cardcar';
 
 
 export const cars = [
@@ -2704,62 +2705,22 @@ export default function Inventory() {
         </div>
         
         <div className="col-12 col-md-9">
-          <div className="row g-3 flex-column">
-            {paginatedCars.map(car => (
-              <div className="col-12" key={car.id}>
-                <div className="card p-4 shadow-lg" style={{marginRight: '1.5rem', borderRadius: '18px', fontSize: '1.2rem', minHeight: 0, height: 'auto', boxSizing: 'border-box'}}>
-                  <div className="d-flex flex-column flex-md-row align-items-stretch w-100" style={{gap: '15px', minHeight: 0, height: 'auto'}}>
-                    <div style={{flex: '3', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 0}}>
-                      <img 
-                        src={car.images[0]} 
-                        style={{width: '100%', height: 'auto', maxWidth: '100%', maxHeight: '340px', objectFit: 'cover', borderRadius: '12px'}} 
-                        className="car-img-hover" 
-                        alt={`${car.brand} ${car.title}`} 
-                        onError={e => e.target.style.display='none'} 
-                        onClick={() => openModal(car)}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="car-info-box ms-4 d-flex flex-column justify-content-center" style={{flex: '2', background: 'rgba(255,255,255,0.97)', borderRadius: '12px', padding: '24px', minHeight: 0, height: 'auto', maxHeight: 'none', overflow: 'hidden'}}>
-                      <div className="d-flex justify-content-between align-items-center mb-2 flex-wrap">
-                        <h2 className="text-center text-md-start mb-0" style={{wordBreak: 'break-word', whiteSpace: 'normal'}}>{car.title}</h2>
-                        <div className="fw-bold text-success" style={{fontSize: '1.5rem'}}>{car.price || ""}</div>
-                      </div>
-                      <hr className="my-2" />
-                      <div className="d-flex flex-row gap-5 align-items-center w-100">
-                        <div className="d-flex flex-column gap-2">
-                          <div className="d-flex flex-row flex-wrap gap-2 align-items-center">
-                           <span className="badge bg-primary">{car.type}</span>
-                           <span className="badge bg-secondary">{car.year}</span>
-                           <span className="badge bg-success text-white">Down: {car.downPayment || 'N/A'}</span>
-                           <span className="badge bg-info text-white">Miles: {car.miles}</span>
-                            </div>
-                          <div className="car-location text-secondary" style={{fontSize: '1.1rem', wordBreak: 'break-word', whiteSpace: 'normal'}}>
-                            <i className="fa-solid fa-location-dot me-2" style={{color: '#0782fa'}}></i>
-                            {car.location || 'Location not available'}
-                          </div>
-                        </div>
-                      </div>
-                        <div className="d-flex flex-column justify-content-center align-items-center w-100 mt-4">
-                          <button
-                            className="btn btn-success btn-lg px-5 py-2 fw-bold"
-                            style={{fontSize: '1.1rem', borderRadius: '2rem', height: '60px'}}
-                            onClick={() => { setInfoCar(car); setShowInfoModal(true); }}
-                          >
-                            Request information
-                          </button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-            {paginatedCars.length === 0 && (
-              <div className="col-12">
-                <div className="alert alert-warning">No cars found.</div>
-              </div>
-            )}
-          </div>
+  <div className="row g-3 flex-column">
+    {paginatedCars.map(car => (
+      <CarCard
+        key={car.id}
+        car={car}
+        openModal={openModal}
+        setInfoCar={setInfoCar}
+        setShowInfoModal={setShowInfoModal}
+      />
+    ))}
+    {paginatedCars.length === 0 && (
+      <div className="col-12">
+        <div className="alert alert-warning">No cars found.</div>
+      </div>
+    )}
+  </div>
           {/* Paginación abajo */}
           <nav className="pagination-bottom">
             <ul className="pagination mb-0">
