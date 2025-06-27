@@ -40,8 +40,8 @@ export default function Navbar() {
           <li>
           <Link className="nav-link" to="/contact-us">Contact Us</Link>
          </li>
-          <li>
-          <Link className="nav-link" to="">Privacy Policy</Link>
+          <li> 
+          <Link className="nav-link" to="/privacy-policy">Privacy Policy</Link>         
          </li>
         <li>
         <Link className="nav-link" id="Link-I" to="/inventory">View inventory</Link>

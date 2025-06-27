@@ -1,0 +1,22 @@
+.privacy-wrapper {
+  max-width: 1200px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.privacy-wrapper h2 {
+  font-weight: 700;
+}
+
+.privacy-wrapper ul {
+  padding-left: 1.2rem;
+}
+
+.privacy-wrapper li {
+  margin-bottom: 0.5rem;
+}
