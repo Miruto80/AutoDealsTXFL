@@ -8,7 +8,6 @@
 
 header h1 {
     color: black; /* Color del texto del h1 */
-    font-size: 1.5rem; /* Tamaño del h1 para que no sea demasiado grande */
     font-weight: bold;
      text-transform: uppercase;
 }
@@ -18,8 +17,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold !important;
     transition: color 0.5s ease;
-    font-size: 19px !important;
-    margin-left: 5px;
+    font-size: 16px !important; /* Antes 19px, más ligero en pantalla */
 }
 header nav ul li a:hover {
     color: #0782fa !important; /* Color de los enlaces */
@@ -36,4 +34,14 @@ header nav ul li a:hover {
 
 #Link-I:hover{
     background-color: black;
+}
+
+.search-wrapper {
+  min-width: 32px;
+}
+
+.search-form input {
+  width: 180px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }

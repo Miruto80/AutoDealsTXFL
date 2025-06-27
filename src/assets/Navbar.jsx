@@ -17,9 +17,9 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">        
-              <img src="/imagenes/Comunes/Logo.webp" width="150" height="80" className="d-inline-block align-text-top" alt="Logo" />
+              <img src="/imagenes/Comunes/Logo.webp" width="120" height="70" className="d-inline-block align-text-top" alt="Logo" />
             </Link>
-            <h1 className="navbar-brand fs-4 d-none d-sm-inline d-lg-inline fs-lg-2 text-black">
+            <h1 className="navbar-brand fs-6 d-none d-sm-inline d-lg-inline fs-lg-2 text-black">
               <b>Used Cars for Sale - Drive today!</b>
             </h1>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,14 +27,27 @@ export default function Navbar() {
             </button>
             
             <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul className="navbar-nav mb-2 mb-lg-0">
-                <li>
-                  <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" id="Link-I" to="/inventory">View inventory</Link>
-                </li>
-              </ul>
+             <ul className="navbar-nav mb-2 mb-lg-0">
+             <li>
+             <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li>
+            <Link className="nav-link" to="/pre-approval">Pre-approval</Link>
+            </li>
+            <li>
+            <Link className="nav-link" to="/trade-in">Trade in</Link>
+            </li>
+          <li>
+          <Link className="nav-link" to="/contact-us">Contact Us</Link>
+         </li>
+          <li>
+          <Link className="nav-link" to="">Privacy Policy</Link>
+         </li>
+        <li>
+        <Link className="nav-link" id="Link-I" to="/inventory">View inventory</Link>
+       </li>
+      </ul>
+
               <form className="d-flex ms-3" role="search" onSubmit={handleSubmit}>
                 <input
                   className="form-control me-2"
