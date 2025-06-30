@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 
 export default function CarCard({ car, index, openModal, setInfoCar, setShowInfoModal }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
   const controls = useAnimation();
 
   useEffect(() => {
