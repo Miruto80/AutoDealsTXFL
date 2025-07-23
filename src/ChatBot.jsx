@@ -170,7 +170,7 @@ const ChatBot = () => {
           </form>
         </>
       ) : (
-        <button onClick={() => setOpen(true)} style={{ width: 60, height: 60, borderRadius: "50%", background: "#007bff", color: "#fff", border: "none", fontSize: 28, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0 }}>
+        <button onClick={() => setOpen(true)} style={{ width: 60, height: 60, background: "#007bff", color: "#fff", border: "none", fontSize: 28, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0 }}>
           <i className="fa-solid fa-comments"></i>
         </button>
       )}
