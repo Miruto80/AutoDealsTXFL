@@ -36,6 +36,11 @@ header nav ul li a:hover {
     background-color: black;
 }
 
+.navbar-toggler {
+  margin-right: 1rem; /* o usa 16px si prefieres */
+}
+
+
 .search-wrapper {
   min-width: 32px;
 }
