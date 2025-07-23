@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import { Link } from 'react-router-dom';
 import './assets/css/hero.css';
+import ButtonSms from './assets/ButtonSms.jsx';
 
 export default function Home() {
   const latestCars = cars.slice(0, 9);
@@ -157,6 +158,7 @@ export default function Home() {
         </div>
       </section>
       {/* End About Us Section */}
+      <ButtonSms />
     </div>
   );
 }

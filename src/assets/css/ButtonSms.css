@@ -1,0 +1,30 @@
+.sms-button-fixed-center {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* ⬅️ Anclado a la izquierda */
+  z-index: 9999;
+  padding: 12px 24px;
+  background-color: #0782fa;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+.sms-button-fixed-center i {
+  margin-right: 8px;
+  color: #FFD700;
+}
+
+.sms-button-fixed-center:hover {
+  background-color: #055ec2;
+}
+
+@media (min-width: 768px) {
+  .sms-button-fixed-center {
+    display: none;
+  }
+}

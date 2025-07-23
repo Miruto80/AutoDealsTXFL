@@ -123,7 +123,7 @@ const ChatBot = () => {
       position: "fixed",
       bottom: 20,
       right: 20,
-      zIndex: 1000,
+      zIndex: 99000,
       width: open ? 320 : 60,
       height: open ? 420 : 60,
       background: "#fff",
