@@ -50,3 +50,18 @@ header nav ul li a:hover {
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
+
+.search-icon {
+  border: none;
+  background: transparent;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.search-icon i:hover {
+  color: #0782fa !important;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
