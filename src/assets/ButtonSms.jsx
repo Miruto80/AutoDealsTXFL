@@ -11,7 +11,7 @@ const SmsButton = () => {
       href={`sms:${phoneNumber}?&body=${message}`}
       className="sms-button-fixed-center"
     >
-      <i className="fa-solid fa-message"></i> Text Us Now
+      <i className="fa-solid fa-message"></i> Text Us
     </a>
   );
 };
