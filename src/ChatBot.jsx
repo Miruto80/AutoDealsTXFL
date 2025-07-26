@@ -163,10 +163,10 @@ const ChatBot = () => {
               type="text"
               value={input}
               onChange={e => setInput(e.target.value)}
-              placeholder="Escribe tu pregunta..."
+              placeholder="Type your question..."
               style={{ flex: 1, border: "none", padding: 10, outline: "none" }}
             />
-            <button type="submit" style={{ background: "#007bff", color: "#fff", border: "none", padding: "0 16px", cursor: "pointer" }}>Enviar</button>
+            <button type="submit" style={{ background: "#007bff", color: "#fff", border: "none", padding: "0 16px", cursor: "pointer" }}>Send</button>
           </form>
         </>
       ) : (
