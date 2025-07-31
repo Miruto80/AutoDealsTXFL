@@ -2728,16 +2728,20 @@ export default function Inventory() {
   const search = globalSearch;
 
   const filteredCars = cars.filter(car => {
-    const matchesType = selectedType ? car.type === selectedType : true;
-    const matchesBrand = selectedBrand ? car.brand === selectedBrand : true;
-    const matchesYear = selectedYear ? car.year === Number(selectedYear) : true;
-    const matchesLocation = selectedLocation ? car.location === selectedLocation : true;
-    const matchesSearch = `${car.brand} ${car.title}`.toLowerCase().includes(search.toLowerCase());
-    return matchesType && matchesBrand && matchesYear && matchesLocation && matchesSearch;
-  });
+  const matchesType = selectedType ? car.type === selectedType : true;
+  const matchesBrand = selectedBrand ? car.brand === selectedBrand : true;
+  const matchesYear = selectedYear ? car.year === Number(selectedYear) : true;
+  const matchesLocation = selectedLocation ? car.location === selectedLocation : true;
+  const matchesSearch = `${car.brand} ${car.title}`.toLowerCase().includes(search.toLowerCase());
+  return matchesType && matchesBrand && matchesYear && matchesLocation && matchesSearch;
+});
 
-  const totalPages = Math.ceil(filteredCars.length / carsPerPage);
-  const paginatedCars = filteredCars.slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage);
+// Ordena por ID descendente (más recientes primero)
+const sortedCars = [...filteredCars].sort((a, b) => b.id - a.id);
+
+const totalPages = Math.ceil(sortedCars.length / carsPerPage);
+const paginatedCars = sortedCars.slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage);
+
   const goToPage = (page) => setCurrentPage(page);
 
   const openModal = (car) => {
