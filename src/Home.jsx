@@ -7,7 +7,9 @@ import './assets/css/hero.css';
 import ButtonSms from './assets/ButtonSms.jsx';
 
 export default function Home() {
-  const latestCars = cars.slice(0, 9);
+ const latestCars = [...cars]
+  .sort((a, b) => b.id - a.id) // Ordena por ID descendente
+  .slice(0, 9);      
   const heroSlides = [
     {
       img: '/imagenes/Comunes/Fondocarro.webp',

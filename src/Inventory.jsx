@@ -2699,10 +2699,11 @@ export const cars = [
 ];
 
 
-const carTypes = [...new Set(cars.map(car => car.type))];
-const carBrands = [...new Set(cars.map(car => car.brand))];
-const carYears = [...new Set(cars.map(car => car.year))].sort((a, b) => b - a);
-const carLocations = [...new Set(cars.map(car => car.location))];
+const sortedCarsById = [...cars].sort((a, b) => b.id - a.id); // Ordena antes de cualquier filtro
+const carTypes = [...new Set(sortedCarsById.map(car => car.type))];
+const carBrands = [...new Set(sortedCarsById.map(car => car.brand))];
+const carYears = [...new Set(sortedCarsById.map(car => car.year))].sort((a, b) => b - a);
+const carLocations = [...new Set(sortedCarsById.map(car => car.location))];
 
 export default function Inventory() {
   const { search: globalSearch } = useSearch();
@@ -2727,20 +2728,17 @@ export default function Inventory() {
 
   const search = globalSearch;
 
-  const filteredCars = cars.filter(car => {
-  const matchesType = selectedType ? car.type === selectedType : true;
-  const matchesBrand = selectedBrand ? car.brand === selectedBrand : true;
-  const matchesYear = selectedYear ? car.year === Number(selectedYear) : true;
-  const matchesLocation = selectedLocation ? car.location === selectedLocation : true;
-  const matchesSearch = `${car.brand} ${car.title}`.toLowerCase().includes(search.toLowerCase());
-  return matchesType && matchesBrand && matchesYear && matchesLocation && matchesSearch;
-});
+  const filteredCars = sortedCarsById.filter(car => {
+    const matchesType = selectedType ? car.type === selectedType : true;
+    const matchesBrand = selectedBrand ? car.brand === selectedBrand : true;
+    const matchesYear = selectedYear ? car.year === Number(selectedYear) : true;
+    const matchesLocation = selectedLocation ? car.location === selectedLocation : true;
+    const matchesSearch = `${car.brand} ${car.title}`.toLowerCase().includes(search.toLowerCase());
+    return matchesType && matchesBrand && matchesYear && matchesLocation && matchesSearch;
+  });
 
-// Ordena por ID descendente (más recientes primero)
-const sortedCars = [...filteredCars].sort((a, b) => b.id - a.id);
-
-const totalPages = Math.ceil(sortedCars.length / carsPerPage);
-const paginatedCars = sortedCars.slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage);
+const totalPages = Math.ceil(filteredCars.length / carsPerPage);
+const paginatedCars = filteredCars.slice((currentPage - 1) * carsPerPage, currentPage * carsPerPage);
 
   const goToPage = (page) => setCurrentPage(page);
 
