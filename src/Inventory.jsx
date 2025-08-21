@@ -2766,6 +2766,24 @@ export const cars = [
     ],
     type: 'Suvs',
   },
+  {
+    id: 162,
+    brand: 'INFINITI',
+    title: '2017 Infiniti QX80 4WD',
+    year: 2017,
+    price: '',
+    downPayment: '$2,500',
+    location: 'Arlington, TX',
+    miles: '106,560',
+    images: [
+      '/imagenes/Suvs/2017 Infiniti QX80 4WD (1).webp',
+      '/imagenes/Suvs/2017 Infiniti QX80 4WD (2).webp',
+      '/imagenes/Suvs/2017 Infiniti QX80 4WD (3).webp',
+      '/imagenes/Suvs/2017 Infiniti QX80 4WD (4).webp',
+      '/imagenes/Suvs/2017 Infiniti QX80 4WD (5).webp',
+    ],
+    type: 'Suvs',
+  },
 
 ];
 
