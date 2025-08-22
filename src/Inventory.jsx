@@ -2784,6 +2784,42 @@ export const cars = [
     ],
     type: 'Suvs',
   },
+  {
+    id: 163,
+    brand: 'CHEVROLET',
+    title: '2017 Chevrolet Silverado 1500 2LT',
+    year: 2017,
+    price: '',
+    downPayment: '$4,000',
+    location: 'Arlington, TX',
+    miles: '115,771',
+    images: [
+      '/imagenes/Trucks/2017 Chevrolet Silverado 1500 2LT (4).webp',
+      '/imagenes/Trucks/2017 Chevrolet Silverado 1500 2LT (1).webp',
+      '/imagenes/Trucks/2017 Chevrolet Silverado 1500 2LT (2).webp',
+      '/imagenes/Trucks/2017 Chevrolet Silverado 1500 2LT (3).webp',
+      '/imagenes/Trucks/2017 Chevrolet Silverado 1500 2LT (5).webp',
+    ],
+    type: 'Trucks',
+  },
+  {
+    id: 164,
+    brand: 'CHEVROLET',
+    title: '2019 Chevrolet Silverado RST 4x4',
+    year: 2019,
+    price: '',
+    downPayment: '$5,000',
+    location: 'Arlington, TX',
+    miles: '86,101',
+    images: [
+      '/imagenes/Trucks/2019 Chevrolet Silverado RST 4x4 (1).webp',
+      '/imagenes/Trucks/2019 Chevrolet Silverado RST 4x4 (2).webp',
+      '/imagenes/Trucks/2019 Chevrolet Silverado RST 4x4 (3).webp',
+      '/imagenes/Trucks/2019 Chevrolet Silverado RST 4x4 (4).webp',
+      '/imagenes/Trucks/2019 Chevrolet Silverado RST 4x4 (5).webp',
+    ],
+    type: 'Trucks',
+  },
 
 ];
 
